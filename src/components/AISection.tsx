@@ -1,5 +1,4 @@
-
-import { Brain, Zap, Circuit, Sparkles, ArrowRight } from "lucide-react";
+import { Brain, Zap, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const AISection = () => {
@@ -19,7 +18,7 @@ const AISection = () => {
       description: "Automatizamos processos específicos do seu negócio com precisão cirúrgica"
     },
     {
-      icon: Circuit,
+      icon: Sparkles,
       title: "IA Sob Medida",
       description: "Desenvolvemos inteligências artificiais únicas para resolver seus desafios específicos"
     }

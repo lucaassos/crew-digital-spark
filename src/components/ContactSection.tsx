@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -17,18 +17,8 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message
-    const message = `Olá! Meu nome é ${formData.name}.
-
-Email: ${formData.email}
-${formData.phone ? `Telefone: ${formData.phone}` : ''}
-
-Mensagem: ${formData.message}`;
-    
-    const whatsappUrl = `https://wa.me/5548991329330?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-    
-    toast.success("Redirecionando para o WhatsApp! Aguarde nosso contato.");
+    // Simulate form submission
+    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
     
     // Reset form
     setFormData({
@@ -46,19 +36,11 @@ Mensagem: ${formData.message}`;
     });
   };
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/5548991329330', '_blank');
-  };
-
-  const openInstagram = () => {
-    window.open('https://instagram.com/usecrewdigital', '_blank');
-  };
-
   return (
-    <section id="contato" className="py-20 bg-gradient-to-br from-white/50 to-slate-100/50 backdrop-blur-sm">
+    <section id="contato" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 glow-effect">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Entre em <span className="text-crew-blue-600">Contato</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -80,55 +62,38 @@ Mensagem: ${formData.message}`;
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-4 futuristic-hover p-2 rounded-lg">
+              <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-crew-blue-50 rounded-xl flex items-center justify-center">
                   <Mail className="text-crew-blue-600 w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Email</div>
-                  <div className="text-gray-600">lucas@crewagencia.com</div>
-                  <div className="text-gray-600">larissa@crewagencia.com</div>
+                  <div className="text-gray-600">contato@crew.com.br</div>
                 </div>
               </div>
 
-              <div 
-                className="flex items-center space-x-4 futuristic-hover p-2 rounded-lg cursor-pointer"
-                onClick={openWhatsApp}
-              >
+              <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-crew-orange-50 rounded-xl flex items-center justify-center">
                   <Phone className="text-crew-orange-500 w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">WhatsApp</div>
-                  <div className="text-gray-600">(48) 99132-9330</div>
+                  <div className="font-semibold text-gray-900">Telefone</div>
+                  <div className="text-gray-600">(11) 9999-9999</div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 futuristic-hover p-2 rounded-lg">
+              <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-crew-blue-50 rounded-xl flex items-center justify-center">
                   <MapPin className="text-crew-blue-600 w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Localização</div>
-                  <div className="text-gray-600">Florianópolis, SC</div>
-                </div>
-              </div>
-
-              <div 
-                className="flex items-center space-x-4 futuristic-hover p-2 rounded-lg cursor-pointer"
-                onClick={openInstagram}
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl flex items-center justify-center">
-                  <Instagram className="text-purple-600 w-6 h-6" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Instagram</div>
-                  <div className="text-gray-600">@usecrewdigital</div>
+                  <div className="text-gray-600">São Paulo, SP</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-crew-blue-50 to-crew-orange-50 rounded-2xl p-6 futuristic-hover">
+            <div className="bg-gradient-to-br from-crew-blue-50 to-crew-orange-50 rounded-2xl p-6">
               <h4 className="font-bold text-gray-900 mb-2">Horário de Atendimento</h4>
               <p className="text-gray-600">
                 Segunda a Sexta: 9h às 18h<br />
@@ -138,7 +103,7 @@ Mensagem: ${formData.message}`;
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 futuristic-hover">
+          <div className="bg-gray-50 rounded-3xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -151,7 +116,7 @@ Mensagem: ${formData.message}`;
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-white/50"
+                  className="w-full"
                   placeholder="Seu nome completo"
                 />
               </div>
@@ -167,7 +132,7 @@ Mensagem: ${formData.message}`;
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-white/50"
+                  className="w-full"
                   placeholder="seu@email.com"
                 />
               </div>
@@ -182,8 +147,8 @@ Mensagem: ${formData.message}`;
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-white/50"
-                  placeholder="(48) 99999-9999"
+                  className="w-full"
+                  placeholder="(11) 99999-9999"
                 />
               </div>
 
@@ -198,17 +163,17 @@ Mensagem: ${formData.message}`;
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full bg-white/50"
+                  className="w-full"
                   placeholder="Conte-nos sobre seu projeto..."
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-crew-blue-600 to-crew-blue-700 hover:from-crew-blue-700 hover:to-crew-blue-800 text-white py-3 futuristic-hover"
+                className="w-full bg-gradient-to-r from-crew-blue-600 to-crew-blue-700 hover:from-crew-blue-700 hover:to-crew-blue-800 text-white py-3"
                 size="lg"
               >
-                Enviar via WhatsApp
+                Enviar Mensagem
                 <Send className="ml-2 w-5 h-5" />
               </Button>
             </form>

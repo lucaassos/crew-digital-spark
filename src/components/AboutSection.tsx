@@ -1,117 +1,94 @@
 
-import { Target, Users, Lightbulb, Heart } from "lucide-react";
+import { CheckCircle, Target, Users, Zap } from "lucide-react";
 
 const AboutSection = () => {
+  const stats = [
+    { number: "50+", label: "Projetos Entregues" },
+    { number: "3+", label: "Anos de Experiência" },
+    { number: "100%", label: "Clientes Satisfeitos" },
+    { number: "24/7", label: "Suporte Técnico" }
+  ];
+
   const values = [
     {
       icon: Target,
-      title: "Foco no Cliente",
-      description: "Cada projeto é único. Desenvolvemos soluções sob medida que se adaptam perfeitamente às suas necessidades específicas."
-    },
-    {
-      icon: Lightbulb,
-      title: "Inovação Constante",
-      description: "Estamos sempre explorando novas tecnologias e abordagens para entregar resultados extraordinários."
+      title: "Foco em Resultados",
+      description: "Cada projeto é desenvolvido com foco em gerar resultados concretos para o seu negócio."
     },
     {
       icon: Users,
-      title: "Parceria Verdadeira",
-      description: "Mais do que prestadores de serviço, somos parceiros na jornada de transformação digital do seu negócio."
+      title: "Trabalho em Equipe",
+      description: "Nossa crew trabalha de forma integrada para entregar as melhores soluções."
     },
     {
-      icon: Heart,
-      title: "Paixão pelo Digital",
-      description: "Fazemos o que amamos: criar experiências digitais que realmente fazem a diferença na vida das pessoas."
+      icon: Zap,
+      title: "Inovação Constante",
+      description: "Sempre atualizados com as últimas tecnologias e tendências do mercado."
+    },
+    {
+      icon: CheckCircle,
+      title: "Qualidade Garantida",
+      description: "Comprometidos com a excelência em cada detalhe dos nossos projetos."
     }
   ];
 
   return (
-    <section id="sobre" className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(249,115,22,0.1),transparent_50%)]"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="sobre" className="py-20 bg-gradient-to-br from-gray-50 to-crew-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sobre a <span className="text-crew-blue-400">Crew!</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Sobre a <span className="text-crew-blue-600">Crew!</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Somos uma agência digital que acredita no poder da personalização. Cada cliente tem necessidades únicas, 
-            e é exatamente isso que nos motiva a criar soluções sob medida que realmente fazem a diferença.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Somos uma equipe apaixonada por tecnologia e inovação, dedicada a transformar ideias em soluções digitais de impacto.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-white">
-              Nossa <span className="text-crew-orange-500">Filosofia</span>
-            </h3>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Acreditamos que cada negócio é único e merece soluções igualmente únicas. Por isso, nosso processo 
-              começa sempre com uma análise profunda das suas necessidades específicas.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Não oferecemos pacotes prontos - criamos estratégias e soluções completamente personalizadas, 
-              desde inteligência artificial sob medida até campanhas de marketing direcionadas.
-            </p>
-            <div className="flex items-center space-x-4 p-6 bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-crew-blue-600 to-crew-orange-500 rounded-full flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-3xl md:text-4xl font-bold text-crew-blue-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-white">100% Personalizado</h4>
-                <p className="text-gray-300">Cada projeto é único, assim como seu negócio</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-crew-blue-600 to-crew-orange-500 rounded-3xl p-8 text-white">
-              <div className="flex flex-col justify-center">
-                <h4 className="text-2xl font-bold mb-4">Nosso Compromisso</h4>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    Análise detalhada das suas necessidades
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    Soluções 100% sob medida
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    Acompanhamento personalizado
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    Resultados que fazem diferença
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="group text-center p-6 bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700 hover:border-crew-blue-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 futuristic-hover"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-crew-blue-600/20 to-crew-orange-500/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                <value.icon className="text-crew-blue-400 w-8 h-8" />
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-crew-blue-400 transition-colors duration-300">
-                {value.title}
-              </h3>
-              
-              <p className="text-gray-300 leading-relaxed">
-                {value.description}
-              </p>
             </div>
           ))}
+        </div>
+
+        {/* Our Story */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Nossa História
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                A Crew! nasceu da paixão por criar soluções digitais que realmente fazem a diferença. 
+                Combinamos criatividade, tecnologia e estratégia para entregar resultados excepcionais.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Nossa equipe multidisciplinar trabalha em sinergia para oferecer desde desenvolvimento 
+                de inteligência artificial até estratégias completas de marketing digital, sempre com 
+                foco na experiência do usuário e no sucesso do cliente.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-crew-blue-50 mb-4">
+                    <value.icon className="text-crew-blue-600 w-8 h-8" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">{value.title}</h4>
+                  <p className="text-sm text-gray-600">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

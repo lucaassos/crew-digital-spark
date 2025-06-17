@@ -1,17 +1,9 @@
 
-import { Heart, Instagram } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const Footer = () => {
-  const openInstagram = () => {
-    window.open('https://instagram.com/usecrewdigital', '_blank');
-  };
-
-  const openWhatsApp = () => {
-    window.open('https://wa.me/5548991329330', '_blank');
-  };
-
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-slate-800 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -27,17 +19,10 @@ const Footer = () => {
               Transformamos ideias em realidade digital. Especializados em IA, Social Media, 
               Desenvolvimento Web, Branding e Marketing Digital.
             </p>
-            <div className="flex items-center text-gray-300 mb-4">
+            <div className="flex items-center text-gray-300">
               <span>Feito com</span>
               <Heart className="mx-2 w-4 h-4 text-red-500 fill-current" />
               <span>pela Crew!</span>
-            </div>
-            <div 
-              className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 cursor-pointer transition-colors futuristic-hover p-2 rounded-lg"
-              onClick={openInstagram}
-            >
-              <Instagram className="w-5 h-5" />
-              <span>@usecrewdigital</span>
             </div>
           </div>
 
@@ -57,15 +42,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>lucas@crewagencia.com</li>
-              <li>larissa@crewagencia.com</li>
-              <li 
-                className="cursor-pointer hover:text-crew-blue-400 transition-colors"
-                onClick={openWhatsApp}
-              >
-                (48) 99132-9330
-              </li>
-              <li>Florianópolis, SC</li>
+              <li>contato@crew.com.br</li>
+              <li>(11) 9999-9999</li>
+              <li>São Paulo, SP</li>
             </ul>
           </div>
         </div>

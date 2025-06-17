@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="inicio" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-orange-50 relative overflow-hidden">
+    <section id="inicio" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-crew-blue-400 to-crew-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -30,9 +30,9 @@ const HeroSection = () => {
             </h1>
           </div>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transformamos ideias em <span className="text-crew-blue-600 font-semibold glow-effect">realidade digital</span>. 
-            Somos especialistas em IA, Social Media, Desenvolvimento Web, Branding e Marketing.
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transformamos ideias em <span className="text-crew-blue-400 font-semibold glow-effect">realidade digital</span>. 
+            Somos especialistas em IA, Social Media, Desenvolvimento Web e Marketing.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -49,45 +49,38 @@ const HeroSection = () => {
               onClick={openWhatsApp}
               variant="outline"
               size="lg"
-              className="border-crew-blue-600 text-crew-blue-600 hover:bg-crew-blue-50 px-8 py-4 text-lg futuristic-hover"
+              className="border-crew-blue-600 text-crew-blue-400 hover:bg-crew-blue-900 px-8 py-4 text-lg futuristic-hover"
             >
               Fale Conosco
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-float futuristic-hover" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-                <div className="text-2xl font-bold text-crew-blue-600 glow-effect">IA</div>
-                <div className="text-sm text-gray-600">Inteligência Artificial</div>
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700">
+                <div className="text-2xl font-bold text-crew-blue-400 glow-effect">IA</div>
+                <div className="text-sm text-gray-300">Inteligência Artificial</div>
               </div>
             </div>
             
             <div className="animate-float futuristic-hover" style={{ animationDelay: '0.4s' }}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700">
                 <div className="text-2xl font-bold text-crew-orange-500 glow-effect">Social</div>
-                <div className="text-sm text-gray-600">Media</div>
+                <div className="text-sm text-gray-300">Media</div>
               </div>
             </div>
             
             <div className="animate-float futuristic-hover" style={{ animationDelay: '0.6s' }}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-                <div className="text-2xl font-bold text-crew-blue-600 glow-effect">Sites</div>
-                <div className="text-sm text-gray-600">Desenvolvimento</div>
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700">
+                <div className="text-2xl font-bold text-crew-blue-400 glow-effect">Sites</div>
+                <div className="text-sm text-gray-300">Desenvolvimento</div>
               </div>
             </div>
             
             <div className="animate-float futuristic-hover" style={{ animationDelay: '0.8s' }}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-                <div className="text-2xl font-bold text-crew-orange-500 glow-effect">Marcas</div>
-                <div className="text-sm text-gray-600">Branding</div>
-              </div>
-            </div>
-            
-            <div className="animate-float futuristic-hover" style={{ animationDelay: '1s' }}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-                <div className="text-2xl font-bold text-crew-blue-600 glow-effect">Marketing</div>
-                <div className="text-sm text-gray-600">Digital</div>
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700">
+                <div className="text-2xl font-bold text-crew-blue-400 glow-effect">Marketing</div>
+                <div className="text-sm text-gray-300">Digital</div>
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ const AboutSection = () => {
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Não oferecemos pacotes prontos - criamos estratégias e soluções completamente personalizadas, 
-              desde inteligência artificial sob medida até campanhas de marketing direcionadas.
+              desde inteligência artificial sob medida até campanias de marketing direcionadas.
             </p>
             <div className="flex items-center space-x-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-100">
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-crew-blue-600 to-crew-orange-500 rounded-full flex items-center justify-center">

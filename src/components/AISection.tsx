@@ -1,3 +1,4 @@
+
 import { Brain, Zap, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -63,7 +64,7 @@ const AISection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105"
+              className="group relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Glow Effect */}
@@ -71,16 +72,16 @@ const AISection = () => {
               
               <div className="relative z-10">
                 <div className="mb-6">
-                  <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300">
-                    <feature.icon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                  <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-blue-500/30 to-purple-500/30 group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300">
+                    <feature.icon className="w-8 h-8 text-blue-200 group-hover:text-blue-100 transition-colors duration-300" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-200 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -90,8 +91,8 @@ const AISection = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 mb-8">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 mb-8">
+            <Sparkles className="w-5 h-5 text-yellow-300 animate-pulse" />
             <span className="text-white font-medium">Soluções 100% Personalizadas</span>
           </div>
           
@@ -99,7 +100,7 @@ const AISection = () => {
             Pronto para revolucionar seu negócio com IA?
           </h3>
           
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Cada cliente é único, cada solução é especial. Vamos descobrir juntos como a IA pode transformar sua realidade.
           </p>
           

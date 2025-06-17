@@ -94,8 +94,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #f1f5f9 50%, #e5e7eb 75%, #f9fafb 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
   html {
@@ -119,4 +122,43 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #2563eb;
+}
+
+/* Futuristic hover effects */
+.futuristic-hover {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.futuristic-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(249, 115, 22, 0.1));
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.futuristic-hover:hover::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.futuristic-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2), 0 0 20px rgba(249, 115, 22, 0.1);
+}
+
+.glow-effect {
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
 }
